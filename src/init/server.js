@@ -41,19 +41,20 @@ if (process.env.NODE_ENV === 'development') {
 /**
  * Setting up the logger
  * */
-const accessLogStream = fs.createWriteStream((() => {
-    try {
-        fs.mkdirSync(path.join(__dirname, '../../logs/'));
-    } catch(e) {
-        if ( e.code != 'EEXIST' ) throw e;
-    }
+// const accessLogStream = fs.createWriteStream((() => {
+//     try {
+//         fs.mkdirSync(path.join(__dirname, '../../logs/'));
+//     } catch(e) {
+//         if ( e.code != 'EEXIST' ) throw e;
+//     }
 
-    return path.join(__dirname, `../../logs/access_${(new Date()).toISOString()}.log`);
-})(), { flags: 'a' });
+//     return path.join(__dirname, `../../logs/access_${(new Date()).toISOString()}.log`);
+// })(), { flags: 'a' });
 
-app.use(morgan('combined', {
-    stream: accessLogStream
-}));
+app.use(morgan('dev'));
+// , {
+//     stream: accessLogStream
+// }));
 
 /**
  * Transpile Jsx from node.

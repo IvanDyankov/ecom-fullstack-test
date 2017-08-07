@@ -6,4 +6,88 @@
 body {
     background-color: #FFFFFF;
     color: #888888;
+    font-family: $fontFamily;
+    color: $fontColorMain;
+    font-size: $fontSizeMain;
+    line-height: $lineHeightMain;
 }
+
+.wrapper {
+    max-width: 1024px;
+    margin: auto;
+
+    &.row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.col {
+    flex: 0 0 33%;
+}
+
+@media all and (max-width: 768px) {
+  .col {
+    flex: 0 0 50%
+  }
+}
+
+@media all and (max-width: 480px) {
+  .col {
+    flex: 0 0 100%
+  }
+}
+
+img {
+    display: block;
+    margin: 15px auto;
+    width:100%;
+}
+
+h1 {
+    font-size: $fontSizeLarge;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: $darkPurple;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.productionLabel {
+    width: 50%;
+    background-color: $red;
+    color: $white;
+    text-align: left;
+    padding-left: 10px;
+    font-size: $fontSizeMedium;
+    font-weight: bold;
+}
+
+.cta {
+    text-decoration: none;
+    color: $darkPurple;
+    text-align: center;
+    font-size: $fontSizeMedium;
+    border: 5px solid #00FF00;
+    padding: 10px 50px;
+    margin: 0px 10px;
+    width: 100%;
+}
+
+.description {
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.priceLabel {
+    margin-bottom: 20px;
+    padding-left: 10px;
+
+    span {
+        color: $darkPurple;
+        font-weight: bold;
+        padding-left: 10px;
+        font-size: $fontSizeLarge;
+    }
+}
+

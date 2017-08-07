@@ -43,6 +43,11 @@ describe('<HomePage />', () => {
         }
     });
 
+    test('should render the correct ', () => {
+        const page = shallow(<HomePage />);
+        expect(page.find('.wrapper')).to.have.length(1);
+    });
+
     test('should get prodcuts data', () => {
         const page = mount(<HomePage />);
         expect(axiosGet.mock.calls.length).toBe(1);

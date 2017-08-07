@@ -22,8 +22,15 @@ body {
     }
 }
 
+.product-card {
+    border: 3px solid $lightBlue;
+    margin: 10px;
+    padding: 0px 10px;
+    position: relative;
+}
+
 .col {
-    flex: 0 0 33%;
+    flex: 0 0 30%;
 }
 
 @media all and (max-width: 768px) {
@@ -41,7 +48,7 @@ body {
 img {
     display: block;
     margin: 15px auto;
-    width:100%;
+    width: 100%;
 }
 
 h1 {
@@ -49,8 +56,8 @@ h1 {
     margin-top: 30px;
     margin-bottom: 30px;
     color: $darkPurple;
-    padding-left: 10px;
     font-weight: bold;
+    padding-left: 10px;
 }
 
 .productionLabel {
@@ -70,8 +77,10 @@ h1 {
     font-size: $fontSizeMedium;
     border: 5px solid #00FF00;
     padding: 10px 50px;
-    margin: 0px 10px;
-    width: 100%;
+    margin: 10px 10px;
+    width: 94%;
+    display: block;
+    bottom: 10px;
 }
 
 .description {
@@ -80,7 +89,6 @@ h1 {
 }
 
 .priceLabel {
-    margin-bottom: 20px;
     padding-left: 10px;
 
     span {
@@ -90,4 +98,3 @@ h1 {
         font-size: $fontSizeLarge;
     }
 }
-
